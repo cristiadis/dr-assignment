@@ -24,13 +24,20 @@ var programCard = {
  * @public
  */
 DR.TV.copyCard = function(card) {
-	// Return a copy of the card.
+	let deepClonedCard = deepClone(card);
+
+	// Here you can manipulate the copied card if needed
+
+	return deepClonedCard;
 };
 
-// var clonedProgramCard = DR.TV.copyCard(programCard);
+var deepClonedProgramCard = DR.TV.copyCard(programCard);
 
 // Basic test of functionality
-// console.log(clonedProgramCard !== programCard); // Must return true.
-// console.log(clonedProgramCard.details !== programCard.details); // Must return true.
+console.log(deepClonedProgramCard !== programCard); // Must return true.
+console.log(deepClonedProgramCard.details !== programCard.details); // Must return true.
+console.log(deepClonedProgramCard.cleanName !== programCard.cleanName); // Must return true.
+console.log(deepClonedProgramCard.relatedIds !== programCard.relatedIds); // Must return true.
+console.log(deepClonedProgramCard.published !== programCard.published); // Must return true.
 
 console.log('hep');
