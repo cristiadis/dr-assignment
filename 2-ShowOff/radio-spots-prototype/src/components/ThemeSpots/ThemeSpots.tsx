@@ -2,12 +2,12 @@ import * as React from 'react';
 import { State as ThemeSpotsProps } from '../../state/themeSpots';
 import Spot from '../Spot';
 
+import './ThemeSpots.scss';
+
 interface ComponentProps extends ThemeSpotsProps {}
 
 const ThemeSpots: React.FC<ComponentProps> = (props) => {
   const { data: themes, loading, error } = props;
-
-  console.log(themes);
 
   return (
     <div>
@@ -33,7 +33,9 @@ const ThemeSpots: React.FC<ComponentProps> = (props) => {
                 <ul className={'spot-list__spots'}>
                   {
                     theme.Items.map( (spot, index) =>
-                      <Spot key={ spot.Slug + index } spot={ spot } />
+                      <li key={ spot.Slug + index } className={'spot-list__spot'}>
+                        <Spot spot={ spot } />
+                      </li>
                     )
                   }
                 </ul>

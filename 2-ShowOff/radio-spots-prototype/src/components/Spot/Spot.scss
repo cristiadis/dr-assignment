@@ -1,13 +1,3 @@
-@import '../../styles/breakpoints';
-
-.spot-list__spot {
-  padding: 0 10px 20px;
-
-  @include above('tabletLandscape') {
-    padding: 0 20px 40px;
-  }
-}
-
 .spot__link {
   &:hover {
     .spot-content {
