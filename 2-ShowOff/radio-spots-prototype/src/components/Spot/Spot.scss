@@ -1,0 +1,33 @@
+@import '../../styles/breakpoints';
+
+.spot-list__spot {
+  padding: 0 10px 20px;
+
+  @include above('tabletLandscape') {
+    padding: 0 20px 40px;
+  }
+}
+
+.spot__link {
+  &:hover {
+    .spot-content {
+      transform: translate3d(0,-5px,0);
+    }
+    .spot-header__image {
+      transform: scale(1.03) translate3d(0, 0, 0);
+    }
+  }
+}
+
+.spot-header__image,
+.spot-content {
+  transition: transform .3s ease;
+}
+
+.js-play-trigger {
+  &:hover {
+    .spot-header__image {
+      transform: scale(1.03) translate3d(0, 0, 0);
+    }
+  }
+}
