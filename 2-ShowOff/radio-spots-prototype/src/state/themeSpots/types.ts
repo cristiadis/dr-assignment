@@ -1,5 +1,5 @@
 // These would still need some missing properties, and also some should be optional, but I didn't manage to check which ones yet.
-// Some types can also be made more specific, so instead of string, for example, we have "Theme" | "Podcast" etc.
+// Some types can also be made more specific, so instead of string, for example, we have "Series" | "Podcast" etc.
 
 export interface Spot {
   Type: string,
