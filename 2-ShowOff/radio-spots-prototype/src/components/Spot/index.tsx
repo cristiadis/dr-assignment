@@ -18,15 +18,24 @@ const Spot: React.FC<ComponentProps> = (props) => {
       <article className={`spot ${isSeries ? 'spot--series' : '' }`}>
         {
           isSeries ?
-            <a href={new URL(spot.PresentationUri).pathname} className='spot__link' aria-label={ spot.Title } data-urn={ spot.Urn }>
+            <a
+              href={new URL(spot.PresentationUri).pathname}
+              className='spot__link'
+              aria-label={ spot.Title }
+              data-urn={ spot.Urn }
+            >
               <SpotHeader spot={spot} />
               <SpotContent spot={spot} />
             </a> :
             <>
               <SpotHeader spot={spot} />
-              <a href={new URL(spot.PresentationUri).pathname} className='spot__link' aria-label={`${ spot.ParentTitle } - ${ spot.Title }`}
-              data-urn={ spot.Urn }>
-              <SpotContent spot={spot} />
+              <a
+                href={new URL(spot.PresentationUri).pathname}
+                className='spot__link'
+                aria-label={`${ spot.ParentTitle } - ${ spot.Title }`}
+                data-urn={ spot.Urn }
+              >
+                <SpotContent spot={spot} />
               </a>
             </>
         }

@@ -11,6 +11,7 @@ const ThemeSpotsContainer: React.FC = () => {
   const error = useSelector((state: RootState) => state.themeSpots.error);
   const dispatch = useDispatch();
 
+  // Fetch the theme spots when the component is mounted
   useEffect(() => {
     dispatch(fetchThemeSpots());
   }, [dispatch]);
