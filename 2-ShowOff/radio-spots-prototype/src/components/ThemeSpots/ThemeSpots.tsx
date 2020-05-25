@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { State as ThemeSpotsProps } from '../../state/themeSpots';
 import Spot from '../Spot';
+import Loader from '../Loader';
 
 import './ThemeSpots.scss';
 
@@ -13,7 +14,7 @@ const ThemeSpots: React.FC<ComponentProps> = (props) => {
     <div>
       {
         loading ?
-        'Really boring loader :-(' :
+        <Loader text={'Indlæser'} /> :
         error ?
           error :
           themes.map((theme, index) =>
